@@ -1,0 +1,15 @@
+
+import csv
+import os
+
+# Define the file path and field names
+file_path = os.path.join('etl_pipeline', 'data', 'data_source1.csv')
+fieldnames = ['id', 'name', 'age', 'gender']
+
+# Write a header row and some dummy data to the file
+with open(file_path, mode='w', newline='') as file:
+    writer = csv.DictWriter(file, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerow({'id': 1, 'name': 'John Doe', 'age': 35, 'gender': 'male'})
+    writer.writerow({'id': 2, 'name': 'Jane Smith', 'age': 27, 'gender': 'female'})
+    writer.writerow({'id': 3, 'name': 'Bob Johnson', 'age': 42, 'gender': 'male'})
