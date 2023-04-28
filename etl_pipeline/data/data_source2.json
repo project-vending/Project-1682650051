@@ -1,0 +1,14 @@
+python
+import json
+
+# Define the file path
+file_path = "etl_pipeline/data/data_source2.json"
+
+# Open the file for reading
+with open(file_path, 'r') as f:
+    # Read the JSON content
+    json_content = json.load(f)
+
+# Do something with the JSON content
+# For example, print the JSON object
+print(json_content)
